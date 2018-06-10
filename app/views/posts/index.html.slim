@@ -14,6 +14,8 @@ table
         = link_to 'Edit', edit_post_path(post)
       td
         = link_to 'Delete', post_path(post), class: "dropdown-item link-color pr-90 delete-link", title: "Delete", method: :delete, data: {confirm: "Are You Sure?"}   
+      td
+        button.btn#like data-post-id='#{post.id}' type="button" Like  
       / td
       /   = link_to 'Delete', post_path(post),
       /   -               method: :delete,

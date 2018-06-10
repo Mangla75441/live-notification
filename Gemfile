@@ -15,6 +15,8 @@ gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
+gem 'live_notifications', git: "git://github.com/Afzal7/live_notifications.git"
+gem "rest-client"
 gem "slim-rails"
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

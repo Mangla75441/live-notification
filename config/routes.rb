@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_scope :user do
   resources :home, only: [:index]	
   resources :posts	
+  post "/likes/:id/save_like", to: "likes#save_like"
   root to: "devise/sessions#new"
   end
 
