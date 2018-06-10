@@ -1,0 +1,21 @@
+h1
+  | Listing Posts
+table
+  tr
+    th
+      | Content
+  - @posts.each do |post|
+    tr
+      td
+        = post.content
+      td
+        = link_to 'Show', post_path(post)
+      td
+        = link_to 'Edit', edit_post_path(post)
+      td
+        = link_to 'Delete', post_path(post), class: "dropdown-item link-color pr-90 delete-link", title: "Delete", method: :delete, data: {confirm: "Are You Sure?"}   
+      / td
+      /   = link_to 'Delete', post_path(post),
+      /   -               method: :delete,
+      /   -               data: { confirm: 'Are you sure?' }
+  = link_to 'New Post', new_post_path

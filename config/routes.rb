@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   devise_scope :user do
   resources :home, only: [:index]	
-  	
+  resources :posts	
   root to: "devise/sessions#new"
   end
 
