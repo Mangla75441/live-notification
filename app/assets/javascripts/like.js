@@ -1,11 +1,11 @@
-$(document).on('click','#like',function(){
+$(document).on('click','.like',function(){
     console.log("hello");
     var post_id = $(this).attr('data-post-id');
     console.log("post id: ",post_id);
     $.post('/likes/'+post_id+'/save_like',function(response){
     	console.log(response);
-    	$('#like').attr('disabled','disabled');
-    	$('#like').html('Liked');
+    	$('#'+post_id).attr('disabled','disabled');
+    	$('#'+post_id).html('Liked');
     });
 }); 
 
